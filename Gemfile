@@ -34,9 +34,14 @@ gem "redis", "~> 4.6"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
-
+gem 'bootstrap', '~> 5.1.3'
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
+gem 'popper_js', '~> 2.9', '>= 2.9.3'
+
+gem 'rake', '~> 13.0', '>= 13.0.6'
+
+gem 'rubocop', '~> 1.30', '>= 1.30.1'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
@@ -45,7 +50,11 @@ gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 gem "bootsnap", require: false
 
 # Use Sass to process CSS
-# gem "sassc-rails", "~> 2.1"
+ gem "sassc-rails", "~> 2.1"
+
+ #gem 'execjs', '~> 2.8', '>= 2.8.1'
+
+ gem 'mini_racer', '~> 0.6.2'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem "image_processing", "~> 1.12"
@@ -67,6 +76,8 @@ group :development do
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   gem "rack-mini-profiler"
+
+  gem 'faker', '~> 2.21'
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"

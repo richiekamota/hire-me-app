@@ -1,11 +1,6 @@
-# frozen_string_literal: true
-
 Rails.application.routes.draw do
-  get 'welcome/index'
-
-  resources :articles do
-    resources :comments
-  end
-
+  get 'companies/index'
+  get 'home/index'
+  get 'candidates/index'
   root 'welcome#index'
 end

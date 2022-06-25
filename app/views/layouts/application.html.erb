@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html>
+  <html>
   <head>
-    <title>Railsondocker</title>
+    <title>Hire Me App</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
   </head>
-
-  <body>
-    <%= yield %>
-  </body>
-</html>
+    <body>
+      <% if current_page?(controller: 'welcome', action: 'index') %>     
+        <div class="container">
+          <%= yield %>
+        <div>
+      <% else %>
+        <%= render "shared/navbar", :companies => @companies %>   
+        <div class="container">
+          <%= yield %>
+        <div>     
+      <% end %>   
+      <div data-controller="hello"></div> 
+    </body>
+  </html>
