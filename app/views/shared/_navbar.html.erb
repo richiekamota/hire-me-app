@@ -4,27 +4,16 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div data-controller="select" class="collapse navbar-collapse" id="navbarSupportedContent">
       <!-- Right Side Of Navbar -->            
       <ul class="navbar-nav ms-auto">                        
-        <li class="nav-item dropdown">
-          <%= select_tag(
-            'hiring_stage',
-            options_for_select(
-            companies.map{ |c| [c.name, c.id] }
-            ),
+        <li class="nav-item dropdown" data-action="change->select#change">       
+          <%= select_tag 'hiring_stage', options_for_select(companies.map{ |c| [c.name, c.id]}, :selected=>params[:id].to_i ),
             prompt: "Select your company",
-            class: 'input-block-level chzn-select hiring_stage',
-            id: 'hiring_stage',
-            onclick: "",
-            data: {
-            remote: false,
-            url: '/home/index/',
-            method: 'post'
-            }
-          ) %>
+            class: "input-block-level hiring_stage",
+            disabled: current_page?(controller: 'candidates', action: 'index')%>       
         </li>                                               
       </ul>              
     </div>
-  </div>
+  </div>  
 </nav>
