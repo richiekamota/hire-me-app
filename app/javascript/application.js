@@ -2,8 +2,10 @@
 import { Turbo } from "@hotwired/turbo-rails"
 Turbo.session.drive = false
 import "controllers"
+import "components/candidates_list"
 import "trix"
 import "@rails/actiontext"
 import 'bootstrap'
+
 
 console.log('Hello World from application.js');

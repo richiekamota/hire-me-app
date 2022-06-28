@@ -10,7 +10,7 @@
         <li class="nav-item dropdown" data-action="change->select#change">       
           <%= select_tag 'hiring_stage', options_for_select(companies.map{ |c| [c.name, c.id]}, :selected=>params[:id].to_i ),
             prompt: "Select your company",
-            class: "input-block-level hiring_stage",
+            class: "form-select",
             disabled: current_page?(controller: 'candidates', action: 'index')%>       
         </li>                                               
       </ul>              

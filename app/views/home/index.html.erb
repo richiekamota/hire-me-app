@@ -1,8 +1,12 @@
-<div class="row justify-content-center">
+<div class="row justify-content-center mt-100">
     <div class="container">
-        <h1 class="p-40 text-4xl font-bold text-center">Welcome to the hiring platform of your choice!</h1>
-        <div class="flex items-center justify-center">   
-            <%=link_to "Go to candidates list", {:controller => "candidates", :action => "index", :id => params[:id]}, class: "btn btn-info", disabled: "disabled"%>
-        </div>
+        <h1 class="p-40 text-4xl font-bold text-center">Welcome! Let the hiring begin!</h1>
+        <div class="flex items-center justify-center">  
+            <% if !params[:id].present? %> 
+                <%=link_to "Go to candidates list", {:controller => "candidates", :action => "index", :id => params[:id]}, class: ('btn btn-info disabled' if !params[:id].present?)%>
+            <% else %>
+                <%=link_to "Go to candidates list", {:controller => "candidates", :action => "index", :id => params[:id]}, class: ('btn btn-info')%>
+            <% end %>
+        </div>    
     </div>
 </div> 
