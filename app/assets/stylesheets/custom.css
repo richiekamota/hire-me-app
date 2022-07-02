@@ -28,3 +28,11 @@ html, body {
 .title {
     font-size: 84px;
 }   
+
+.table table-bordered {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 1000px;
+    word-wrap: break-word;
+    list-style: none;
+}

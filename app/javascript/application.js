@@ -2,7 +2,7 @@
 import { Turbo } from "@hotwired/turbo-rails"
 Turbo.session.drive = false
 import "controllers"
-import "components/candidates_list"
+import "components"
 import "trix"
 import "@rails/actiontext"
 import 'bootstrap'

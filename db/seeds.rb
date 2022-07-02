@@ -10,3 +10,8 @@ Company.destroy_all
 5.times do |index|
   Company.create!(name: Faker::Company.name)
 end
+
+Candidate.destroy_all
+10.times do |index|
+  Candidate.create!(name: Faker::Name.name , email: Faker::Internet.email, description: Faker::Lorem.unique.sentence, strengths: ["PHP","Laravel","Vue.js","TailwindCSS"])
+end

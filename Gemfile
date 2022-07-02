@@ -39,6 +39,8 @@ gem 'bootstrap', '~> 5.1.3'
 # gem "bcrypt", "~> 3.1.7"
 gem 'popper_js', '~> 2.9', '>= 2.9.3'
 
+gem 'react_on_rails', '~> 13.0', '>= 13.0.2'
+
 gem 'rake', '~> 13.0', '>= 13.0.6'
 
 gem 'rubocop', '~> 1.30', '>= 1.30.1'
@@ -55,6 +57,8 @@ gem "bootsnap", require: false
  #gem 'execjs', '~> 2.8', '>= 2.8.1'
 
  gem 'mini_racer', '~> 0.6.2'
+
+ gem 'react-bootstrap-rails'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem "image_processing", "~> 1.12"
