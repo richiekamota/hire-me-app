@@ -5,7 +5,6 @@ import "components"
 import "trix"
 import "@rails/actiontext"
 import 'bootstrap'
-import '@emotion/react'
-
+import '@emotion/css'
 
 console.log('Hello World from application.js');

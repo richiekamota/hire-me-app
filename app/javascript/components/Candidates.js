@@ -1,6 +1,14 @@
 import { Component } from "react"
-//import { css } from '@emotion/react'
+import {css} from '@emotion/css'
 import h from "components/htm_create_element"
+
+const main = css`
+   border-collapse:collapse;
+   table-layout:fixed;
+   width:1000px; 
+   word-wrap:break-word;
+   table: table-bordered;
+`;
 
 export default function Candidates (props)  { 
     //console.log(props.props);
@@ -24,7 +32,7 @@ export default function Candidates (props)  {
                                     <div className="col-sm-8"><h4>Job seeking candidates</h4></div>
                                 </div>    
                             </div>
-                            <table className="table table-bordered"> 
+                            <table className="table table-bordered ${main}" > 
                                 <thead>
                                     <tr>
                                         <th>Name</th>
